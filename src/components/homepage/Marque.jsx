@@ -1,21 +1,9 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
-const Marque = () => {
-  const marque = [
-    { "id": 1, "title": "The Lost Island" },
-    { "id": 2, "title": "JavaScript Mastery" },
-    { "id": 3, "title": "The Science of Space" },
-    { "id": 4, "title": "Hidden Truths" },
-    { "id": 5, "title": "React in Action" },
-    { "id": 6, "title": "Biology Basics" },
-    { "id": 7, "title": "Dream Catcher" },
-    { "id": 8, "title": "Node.js Essentials" },
-    { "id": 9, "title": "Physics Fundamentals" },
-    { "id": 10, "title": "The Silent Forest" },
-    { "id": 11, "title": "AI Revolution" },
-    { "id": 12, "title": "Chemistry in Daily Life" }
-  ]
+const Marque = async() => {
+  const res = await fetch("http://localhost:3000/marque.json");
+  const marque = await res.json();
 
   return (
     <div className='mt-10 md:mt-15 lg:mt-20'>
