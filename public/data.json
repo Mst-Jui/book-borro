@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Lost Island",
+    "author": "Daniel Grey",
+    "description": "An adventurous story of a group of friends discovering a mysterious island filled with secrets.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://i.ibb.co/3WZk6FZ/book1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Mastery",
+    "author": "John Smith",
+    "description": "A complete guide to mastering JavaScript from basics to advanced concepts.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://i.ibb.co/Jv8k9sQ/book2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Science of Space",
+    "author": "Emily Carter",
+    "description": "Explore the mysteries of the universe, galaxies, and black holes.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://i.ibb.co/fYkz7hH/book3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Hidden Truths",
+    "author": "Sophia Lee",
+    "description": "A thrilling mystery novel uncovering secrets buried for decades.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://i.ibb.co/7Kk5F1c/book4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "React in Action",
+    "author": "Mark Johnson",
+    "description": "Learn how to build modern web applications using React.",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://i.ibb.co/9n1YpYV/book5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Biology Basics",
+    "author": "Dr. Alan Green",
+    "description": "An introduction to biology, covering cells, organisms, and ecosystems.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://i.ibb.co/0tZx9pP/book6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Dream Catcher",
+    "author": "Liam Brown",
+    "description": "A heartwarming story about chasing dreams and overcoming obstacles.",
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://i.ibb.co/2yqH6kG/book7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Node.js Essentials",
+    "author": "Chris Walker",
+    "description": "A practical guide to building backend applications with Node.js.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://i.ibb.co/YyX7Z2F/book8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Physics Fundamentals",
+    "author": "Isaac Turner",
+    "description": "Understand the core principles of physics including motion, energy, and force.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://i.ibb.co/5nP0v8F/book9.jpg"
+  },
+  {
+    "id": 10,
+    "title": "The Silent Forest",
+    "author": "Olivia White",
+    "description": "A suspenseful story set in a forest where strange things happen at night.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://i.ibb.co/1G6W8Xh/book10.jpg"
+  },
+  {
+    "id": 11,
+    "title": "AI Revolution",
+    "author": "Andrew Collins",
+    "description": "Discover how artificial intelligence is transforming industries worldwide.",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://i.ibb.co/rH8sXzH/book11.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Chemistry in Daily Life",
+    "author": "Nina Patel",
+    "description": "Learn how chemistry plays an important role in our everyday lives.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://i.ibb.co/3T0H7wY/book12.jpg"
+  }
+]

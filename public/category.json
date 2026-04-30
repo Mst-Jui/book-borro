@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "All",
+    "value": "all"
+  },
+  {
+    "id": 2,
+    "name": "Story",
+    "value": "Story"
+  },
+  {
+    "id": 3,
+    "name": "Tech",
+    "value": "Tech"
+  },
+  {
+    "id": 4,
+    "name": "Science",
+    "value": "Science"
+  }
+]
