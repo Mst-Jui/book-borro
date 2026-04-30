@@ -14,7 +14,7 @@ import Image from 'next/image';
 
 async function BookDetailsPage({ params }) {
   const { id } = await params
-  const res = await fetch(`https://book-borro.vercel.app/data.json`, { cache: 'no-store' });
+  const res = await fetch(`https://book-borro.vercel.app/data.json`);
   const books = await res.json();
   const book = books.find((b) => b.id === Number(id));
 
