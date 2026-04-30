@@ -2,7 +2,9 @@ import Image from "next/image";
 
 
 const FeaturedBooks = async () => {
-  const res = await fetch("http://localhost:3000/feature.json");
+  const res = await fetch("/feature.json",{
+    cache: "no-store",
+  });
   const info = await res.json();
   const data = info.slice(0, 4);
   return (

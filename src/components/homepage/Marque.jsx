@@ -2,7 +2,7 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 
 const Marque = async() => {
-  const res = await fetch("http://localhost:3000/marque.json");
+  const res = await fetch("/marque.json");
   const marque = await res.json();
 
   return (
