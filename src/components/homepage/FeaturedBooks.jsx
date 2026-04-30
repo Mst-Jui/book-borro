@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 const FeaturedBooks = async () => {
-  const res = await fetch("https://book-borro.vercel.app/feature.json");
+  const res = await fetch("https://book-borro.vercel.app/data.json");
   const info = await res.json();
   const data = info.slice(0, 4);
   return (
     <div className="my-10 md:my-15 lg:my-20 max-w-7xl mx-auto">
       <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center lg:text-start text-gray-900 my-6 tracking-wide">
-        Best-Selling Books
+        Featured Books
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -25,7 +26,7 @@ const FeaturedBooks = async () => {
                 {/* Image */}
                 <div className="relative w-full h-48 sm:h-52 md:h-56 lg:h-60 rounded-xl overflow-hidden">
                   <Image
-                    src={d.image}
+                    src={d.image_url}
                     alt={d.title}
                     fill
                     className="object-cover"
@@ -43,9 +44,11 @@ const FeaturedBooks = async () => {
                   </p>
 
                   <div className="mt-auto">
-                    <button className="w-full rounded-full btn btn-outline text-orange-500 border-orange-100 hover:bg-orange-500 hover:text-white transition">
-                      View Details
-                    </button>
+                    <Link href={`/all-books/${d.id}`}>
+                      <button className="w-full rounded-full btn btn-outline text-orange-500 border-orange-100 hover:bg-orange-500 hover:text-white transition">
+                        View Details
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

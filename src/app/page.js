@@ -9,8 +9,8 @@ export default function Home() {
     <div>
       <Banner />
       <Marque />
-      <BooksMonth />
       <FeaturedBooks />
+      <BooksMonth />
     </div>
   );
 }

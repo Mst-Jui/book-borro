@@ -8,12 +8,12 @@ const Search = () => {
   const searchParams = useSearchParams();
   const [search, setSearch] = useState("");
 
-  // URL থেকে মান নিয়ে ইনপুট ফিল্ডে বসানো
   useEffect(() => {
     setSearch(searchParams.get("search") || "");
   }, [searchParams]);
 
   const handleSearch = () => {
+    
     const params = new URLSearchParams(searchParams.toString());
 
     if (search) {
@@ -22,7 +22,6 @@ const Search = () => {
       params.delete("search");
     }
 
-    // URL আপডেট করা
     router.push(`?${params.toString()}`);
   };
 
@@ -32,12 +31,12 @@ const Search = () => {
         <input
           type="text"
           placeholder="Search your book name"
-          className="input input-bordered join-item text-black"
+          className="input join-item border border-gray-300"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSearch()}
         />
-        <button onClick={handleSearch} className="btn btn-neutral join-item">
+        <button onClick={handleSearch} className="btn bg-orange-500 text-white join-item">
           Search
         </button>
       </div>

@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
-const BookCard = ({book}) => {
+const BookCard = ({ book }) => {
   return (
     <div>
       <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden flex flex-col p-3">
@@ -23,9 +24,12 @@ const BookCard = ({book}) => {
           </h2>
 
           <div className="mt-auto">
-            <button className="w-full rounded-full btn btn-outline text-orange-500 border-orange-100 hover:bg-orange-500 hover:text-white transition">
+            <Link
+              href={`/all-books/${book.id}`}
+              className="w-full btn btn-outline rounded-full text-orange-500 border-orange-100 hover:bg-orange-500 hover:text-white transition flex items-center justify-center"
+            >
               View Details
-            </button>
+            </Link>
           </div>
         </div>
       </div>
