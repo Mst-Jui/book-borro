@@ -2,7 +2,7 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 
 const Marque = async() => {
-  const res = await fetch("/marque.json");
+  const res = await fetch("https://book-borro-hfpm.vercel.app/marque.json");
   const marque = await res.json();
 
   return (

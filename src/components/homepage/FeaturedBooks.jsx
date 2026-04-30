@@ -2,7 +2,7 @@ import Image from "next/image";
 
 
 const FeaturedBooks = async () => {
-  const res = await fetch("/feature.json",{
+  const res = await fetch("https://book-borro-hfpm.vercel.app/feature.json",{
     cache: "no-store",
   });
   const info = await res.json();
