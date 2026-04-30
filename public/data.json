@@ -6,7 +6,7 @@
     "description": "An adventurous story of a group of friends discovering a mysterious island filled with secrets.",
     "category": "Story",
     "available_quantity": 5,
-    "image_url": "https://i.ibb.co/3WZk6FZ/book1.jpg"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbVKE6bSoc4kHhyP8rudwqqmfaD0UT9JXHiw&s"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "A complete guide to mastering JavaScript from basics to advanced concepts.",
     "category": "Tech",
     "available_quantity": 8,
-    "image_url": "https://i.ibb.co/Jv8k9sQ/book2.jpg"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXgKVxWgTF5KE8mu92HNrknzzxvmfVMkzVzA&s"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "Explore the mysteries of the universe, galaxies, and black holes.",
     "category": "Science",
     "available_quantity": 4,
-    "image_url": "https://i.ibb.co/fYkz7hH/book3.jpg"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqH3N_CfAss1kmWBKuReWLmeTp4m-l_KcNSg&s"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "A thrilling mystery novel uncovering secrets buried for decades.",
     "category": "Story",
     "available_quantity": 6,
-    "image_url": "https://i.ibb.co/7Kk5F1c/book4.jpg"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT99xlLPgvMz-ENC5FQ6F5G3KxcxsxZVmhqwg&s"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "Learn how to build modern web applications using React.",
     "category": "Tech",
     "available_quantity": 7,
-    "image_url": "https://i.ibb.co/9n1YpYV/book5.jpg"
+    "image_url": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781638356035/react-in-action-9781638356035_lg.jpg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "description": "An introduction to biology, covering cells, organisms, and ecosystems.",
     "category": "Science",
     "available_quantity": 3,
-    "image_url": "https://i.ibb.co/0tZx9pP/book6.jpg"
+    "image_url": "https://www.brighteducation.com.au/cdn/shop/collections/Biology_Basics_Book_Set.jpg?v=1596773169"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "description": "A heartwarming story about chasing dreams and overcoming obstacles.",
     "category": "Story",
     "available_quantity": 9,
-    "image_url": "https://i.ibb.co/2yqH6kG/book7.jpg"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmqiGmRINgh27x9SK51PbaVVfmoBRCHe0FEg&s"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "A practical guide to building backend applications with Node.js.",
     "category": "Tech",
     "available_quantity": 5,
-    "image_url": "https://i.ibb.co/YyX7Z2F/book8.jpg"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdag2sSsTEZPFHYr8efHX4EDzoyLC49MxVPA&s"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "Understand the core principles of physics including motion, energy, and force.",
     "category": "Science",
     "available_quantity": 4,
-    "image_url": "https://i.ibb.co/5nP0v8F/book9.jpg"
+    "image_url": "https://ooc.iisc.ac.in/wp-content/uploads/2021/07/Fundamentals-of-Physics.jpg"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "A suspenseful story set in a forest where strange things happen at night.",
     "category": "Story",
     "available_quantity": 6,
-    "image_url": "https://i.ibb.co/1G6W8Xh/book10.jpg"
+    "image_url": "https://is1-ssl.mzstatic.com/image/thumb/Publication116/v4/36/66/55/366655a0-485c-58bc-25f5-02ab9d296b00/9783957513984.jpg/1200x630wz.png"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "description": "Discover how artificial intelligence is transforming industries worldwide.",
     "category": "Tech",
     "available_quantity": 7,
-    "image_url": "https://i.ibb.co/rH8sXzH/book11.jpg"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpZGOopyS_f0kYVz6EV34gRvq4VIGwWbMAxA&s"
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "description": "Learn how chemistry plays an important role in our everyday lives.",
     "category": "Science",
     "available_quantity": 5,
-    "image_url": "https://i.ibb.co/3T0H7wY/book12.jpg"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVjLdlThM6WzOa1RelpEVMh9pmE3JyjzPuPg&s"
   }
 ]

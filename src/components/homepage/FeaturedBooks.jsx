@@ -8,7 +8,7 @@ const FeaturedBooks = async () => {
   return (
     <div className="my-10 md:my-15 lg:my-20 max-w-7xl mx-auto">
       <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center lg:text-start text-gray-900 my-6 tracking-wide">
-        Featured Books
+        Best-Selling Books
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -60,3 +60,43 @@ const FeaturedBooks = async () => {
 };
 
 export default FeaturedBooks;
+
+
+
+
+// import BookCard from '@/components/BookCard';
+// import Category from '@/components/Category';
+// import React from 'react';
+
+// const AllBooksPage = async () => {
+//   const res = await fetch("http://localhost:3000/data.json");
+//   const books = await res.json();
+//   return (
+//     <div className='my-10 md:my-15 lg:my-20 max-w-7xl mx-auto'>
+//       <div className=''>
+
+//         {/* category  */}
+//         <Category></Category>
+
+//         {/* all books  */}
+//         <div>
+//           <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center lg:text-start text-gray-900 my-6 tracking-wide'>
+//             All Books
+//           </h2>
+//           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+//             {
+//               books.map(book => {
+//                 return <BookCard key={book.id} book={book} />
+//               })
+//             }
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default AllBooksPage;
+
+
+// responsive kore dau sm md lg device er jonno

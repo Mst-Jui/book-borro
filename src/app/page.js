@@ -1,3 +1,4 @@
+import BooksMonth from "@/components/BooksMonth";
 import Banner from "@/components/homepage/Banner";
 import FeaturedBooks from "@/components/homepage/FeaturedBooks";
 import Marque from "@/components/homepage/Marque";
@@ -8,6 +9,7 @@ export default function Home() {
     <div>
       <Banner />
       <Marque />
+      <BooksMonth />
       <FeaturedBooks />
     </div>
   );
