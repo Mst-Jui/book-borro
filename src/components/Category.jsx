@@ -2,9 +2,7 @@ import React from 'react';
 import CategoryFetch from './CategoryFetch';
 
 const Category = async () => {
-  const res = await fetch("https://book-borro-hfpm.vercel.app/category.json", {
-    cache: "no-store",
-  });
+  const res = await fetch("https://book-borro-hfpm.vercel.app/category.json");
   const categories = await res.json();
 
   return (
