@@ -6,7 +6,7 @@ import React from 'react';
 
 const AllBooksPage = async ({ searchParams }) => {
   const { category } = await searchParams;
-  const res = await fetch("/data.json");
+  const res = await fetch("https://book-borro.vercel.app/data.json");
   const books = await res.json();
 
 
