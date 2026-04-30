@@ -1,28 +1,45 @@
-import React from 'react';
+"use client";
+
+import { useRouter, useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 
 const Search = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [search, setSearch] = useState("");
+
+  // URL থেকে মান নিয়ে ইনপুট ফিল্ডে বসানো
+  useEffect(() => {
+    setSearch(searchParams.get("search") || "");
+  }, [searchParams]);
+
+  const handleSearch = () => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (search) {
+      params.set("search", search.toLowerCase());
+    } else {
+      params.delete("search");
+    }
+
+    // URL আপডেট করা
+    router.push(`?${params.toString()}`);
+  };
+
   return (
-    <div className='mt-5 flex items-center justify-center'>
+    <div className="mt-5 flex items-center justify-center">
       <div className="join">
-        <div>
-          <label className="input validator join-item">
-            <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <g
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                fill="none"
-                stroke="currentColor"
-              >
-                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </g>
-            </svg>
-            <input type="email" placeholder="mail@site.com" required />
-          </label>
-          <div className="validator-hint hidden">Enter valid email address</div>
-        </div>
-        <button className="btn btn-neutral join-item">Search</button>
+        <input
+          type="text"
+          placeholder="Search your book name"
+          className="input input-bordered join-item text-black"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+        />
+        <button onClick={handleSearch} className="btn btn-neutral join-item">
+          Search
+        </button>
       </div>
     </div>
   );

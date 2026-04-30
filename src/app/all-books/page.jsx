@@ -1,24 +1,33 @@
-
 import BookCard from '@/components/BookCard';
 import Category from '@/components/Category';
 import Search from '@/components/Search';
 import React from 'react';
 
+
 const AllBooksPage = async ({ searchParams }) => {
-  const { category } = await searchParams;
-  const res = await fetch("https://book-borro.vercel.app/data.json");
+  
+  const params = await searchParams;
+  const category = params?.category;
+  const search = params?.search;
+
+  
+  const res = await fetch("https://book-borro.vercel.app/data.json", { cache: 'no-store' });
   const books = await res.json();
 
+  
+  const filteredBooks = books.filter((book) => {
+    const matchCategory =
+      !category || category === "all"
+        ? true
+        : book.category?.toLowerCase() === category.toLowerCase();
 
+    const matchSearch =
+      !search
+        ? true
+        : book.title?.toLowerCase().includes(search.toLowerCase());
 
-  const filteredBooks =
-    !category || category === "all"
-      ? books
-      : books.filter(
-        book =>
-          book.category?.toLowerCase() === category?.toLowerCase()
-      );
-
+    return matchCategory && matchSearch;
+  });
 
   return (
     <div>
