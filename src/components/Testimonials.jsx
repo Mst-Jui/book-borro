@@ -42,7 +42,7 @@ const Testimonials = () => {
             {/*  */}
             <div className="flex flex-col gap-2 text-center md:text-left items-center md:items-start">
 
-              {/* Small Label -  */}
+              {/* Small Label added -  */}
               <div className="flex items-center gap-2 text-orange-500 font-bold uppercase tracking-widest text-sm mb-1">
                 {/*  */}
                 <div className="w-6 h-[2px] bg-orange-500 rounded-full hidden md:block"></div>
