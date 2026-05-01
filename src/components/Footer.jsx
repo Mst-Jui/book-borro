@@ -62,7 +62,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/all-photos"
+                  href="/all-books"
                   className="flex gap-2 items-center hover:text-orange-500 text-white transition"
                 >
                   <IoMdBook />
