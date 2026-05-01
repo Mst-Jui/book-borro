@@ -11,22 +11,15 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function RegisterPage() {
   const router = useRouter();
-
-  // ✅ Register Handler (SAFE)
   const onSubmit = async (e) => {
     e.preventDefault();
-
-    // const formData = new FormData(e.currentTarget);
 
     const name = e.target.name.value;
     const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    // 🔍 Debug (optional)
-    // console.log({ name, image, email, password });
-
-    // ✅ Basic validation
+    
     if (!email || !password || !name) {
       toast.error("Please fill all required fields!");
       return;
@@ -40,6 +33,9 @@ export default function RegisterPage() {
         image,
       });
 
+      console.log({data, error});
+      
+
       if (error) {
         toast.error(error.message || "Registration failed!");
         return;
@@ -52,7 +48,7 @@ export default function RegisterPage() {
       }, 1500);
 
     } catch (err) {
-      console.error(err);
+      // console.error(err);
       toast.error("Something went wrong!");
     }
   };
