@@ -70,7 +70,7 @@ export default function LoginPage() {
         <div className="text-center mb-10">
           <h1 className="text-3xl font-black text-slate-800">Welcome Back</h1>
           <p className="text-slate-400 mt-2 italic">
-            Log in to continue with <span className="text-orange-500 font-bold">Book Borro</span>
+            Login to continue with <span className="text-orange-500 font-bold">Book Borro</span>
           </p>
         </div>
 
