@@ -23,7 +23,7 @@ export default function LoginPage() {
       return;
     }
 
-    console.log(email,password);
+    // console.log(email,password);
     
 
     try {

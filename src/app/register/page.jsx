@@ -19,7 +19,7 @@ export default function RegisterPage() {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    
+
     if (!email || !password || !name) {
       toast.error("Please fill all required fields!");
       return;
@@ -33,8 +33,8 @@ export default function RegisterPage() {
         image,
       });
 
-      console.log({data, error});
-      
+      // console.log({data, error});
+
 
       if (error) {
         toast.error(error.message || "Registration failed!");
@@ -53,17 +53,17 @@ export default function RegisterPage() {
     }
   };
 
-  // ✅ Google Login
-  // const handleGoogleLogin = async () => {
-  //   try {
-  //     await authClient.signIn.social({
-  //       provider: "google",
-  //       callbackURL: "/",
-  //     });
-  //   } catch (err) {
-  //     toast.error("Google authentication failed.");
-  //   }
-  // };
+  //  Google Social Login
+  const handleGoogleLogin = async () => {
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: "/",
+      });
+    } catch (err) {
+      toast.error("Google login failed.");
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#fdfdfd] p-4">
@@ -166,14 +166,14 @@ export default function RegisterPage() {
           </span>
         </div>
 
-        {/* Google */}
+        {/* Social Login Button */}
         <Button
-          // onClick={handleGoogleLogin}
-          variant="bordered"
-          className="w-full h-12 font-bold rounded-xl gap-3"
+          onClick={handleGoogleLogin}
+          variant="outline"
+          className="w-full h-12 font-bold rounded-xl gap-3 hover:bg-slate-50"
         >
           <FaGoogle className="text-red-500" />
-          Sign up with Google
+          Login with Google
         </Button>
 
         {/* Login link */}
