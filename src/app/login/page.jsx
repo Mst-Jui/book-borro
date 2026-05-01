@@ -23,6 +23,9 @@ export default function LoginPage() {
       return;
     }
 
+    console.log(email,password);
+    
+
     try {
       const { data, error } = await authClient.signIn.email({
         email,
@@ -47,17 +50,19 @@ export default function LoginPage() {
     }
   };
 
-  // ✅ Google Social Login
-  // const handleGoogleLogin = async () => {
-  //   try {
-  //     await authClient.signIn.social({
-  //       provider: "google",
-  //       callbackURL: "/",
-  //     });
-  //   } catch (err) {
-  //     toast.error("Google login failed.");
-  //   }
-  // };
+ 
+
+  //  Google Social Login
+  const handleGoogleLogin = async () => {
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: "/",
+      });
+    } catch (err) {
+      toast.error("Google login failed.");
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#fdfdfd] p-4">
@@ -129,8 +134,8 @@ export default function LoginPage() {
 
         {/* Social Login Button */}
         <Button
-          // onPress={handleGoogleLogin}
-          variant="bordered"
+          onClick={handleGoogleLogin}
+          variant="outline"
           className="w-full h-12 font-bold rounded-xl gap-3 hover:bg-slate-50"
         >
           <FaGoogle className="text-red-500" />
