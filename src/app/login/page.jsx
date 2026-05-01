@@ -134,7 +134,7 @@ export default function LoginPage() {
           className="w-full h-12 font-bold rounded-xl gap-3 hover:bg-slate-50"
         >
           <FaGoogle className="text-red-500" />
-          Login with my Google
+          Login with My google
         </Button>
 
         {/* Register Link */}
