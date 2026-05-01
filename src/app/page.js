@@ -1,8 +1,9 @@
-import BooksMonth from "@/components/BooksMonth";
+import Testimonials from "@/components/Testimonials";
+import TrendingBooks from "@/components/TrendingBooks";
 import Banner from "@/components/homepage/Banner";
 import FeaturedBooks from "@/components/homepage/FeaturedBooks";
 import Marque from "@/components/homepage/Marque";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
       <Banner />
       <Marque />
       <FeaturedBooks />
-      <BooksMonth />
+      <TrendingBooks />
+      <Testimonials />
     </div>
   );
 }
+
