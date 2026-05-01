@@ -16,15 +16,15 @@ export default function RegisterPage() {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
+    // const formData = new FormData(e.currentTarget);
 
-    const name = formData.get("name") || "";
-    const image = formData.get("image") || "";
-    const email = formData.get("email") || "";
-    const password = formData.get("password") || "";
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
     // 🔍 Debug (optional)
-    console.log({ name, image, email, password });
+    // console.log({ name, image, email, password });
 
     // ✅ Basic validation
     if (!email || !password || !name) {
@@ -58,16 +58,16 @@ export default function RegisterPage() {
   };
 
   // ✅ Google Login
-  const handleGoogleLogin = async () => {
-    try {
-      await authClient.signIn.social({
-        provider: "google",
-        callbackURL: "/",
-      });
-    } catch (err) {
-      toast.error("Google authentication failed.");
-    }
-  };
+  // const handleGoogleLogin = async () => {
+  //   try {
+  //     await authClient.signIn.social({
+  //       provider: "google",
+  //       callbackURL: "/",
+  //     });
+  //   } catch (err) {
+  //     toast.error("Google authentication failed.");
+  //   }
+  // };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#fdfdfd] p-4">
@@ -172,7 +172,7 @@ export default function RegisterPage() {
 
         {/* Google */}
         <Button
-          onClick={handleGoogleLogin}
+          // onClick={handleGoogleLogin}
           variant="bordered"
           className="w-full h-12 font-bold rounded-xl gap-3"
         >
