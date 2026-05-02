@@ -17,7 +17,9 @@ import BookBorrowBtn from '@/components/BookBorroBtn';
 
 async function BookDetailsPage({ params }) {
   const { id } = await params
-  const res = await fetch(`https://book-borro.vercel.app/data.json`);
+  const res = await fetch('https://book-borro.vercel.app/data.json', {
+    cache: "no-store",
+  });
   const books = await res.json();
   const book = books.find((b) => b.id === Number(id));
 

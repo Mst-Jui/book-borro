@@ -4,13 +4,15 @@ import Search from '@/components/Search';
 import React from 'react';
 
 const AllBooksPage = async ({ searchParams }) => {
-  
+
   const params = await searchParams;
   const category = params?.category;
   const search = params?.search;
 
-  
-  const res = await fetch("https://book-borro.vercel.app/data.json", { cache: 'no-store' });
+
+  const res = await fetch("https://book-borro.vercel.app/data.json", {
+    cache: "no-store",
+  });
   const books = await res.json();
 
   const filteredBooks = books.filter((book) => {
@@ -41,7 +43,7 @@ const AllBooksPage = async ({ searchParams }) => {
               All Books
             </h2>
 
-            
+
             {filteredBooks.length > 0 ? (
               <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {filteredBooks.map(book => (
@@ -49,7 +51,7 @@ const AllBooksPage = async ({ searchParams }) => {
                 ))}
               </div>
             ) : (
-              
+
               <div className="text-center py-20 border-2 border-dashed rounded-xl">
                 <h3 className="text-2xl font-bold text-gray-500">Not Found!</h3>
                 <p>No books found matching your search.</p>

@@ -3,7 +3,9 @@ import Link from "next/link";
 import { FaArrowRight, FaBookmark } from "react-icons/fa";
 
 const FeaturedBooks = async () => {
-  const res = await fetch("https://book-borro.vercel.app/data.json");
+  const res = await fetch("https://book-borro.vercel.app/data.json", {
+    cache: "no-store",
+  });
   const info = await res.json();
   const data = info.slice(0, 4);
 
@@ -43,7 +45,7 @@ const FeaturedBooks = async () => {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                
+
               </div>
 
               {/* Content Section */}

@@ -1,8 +1,10 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
-const Marque = async() => {
-  const res = await fetch("https://book-borro.vercel.app/marque.json");
+const Marque = async () => {
+  const res = await fetch("https://book-borro.vercel.app/marque.json", {
+    cache: "no-store",
+  });
   const marque = await res.json();
 
   return (
