@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Book Borro
 
-## Getting Started
+### 🚀 A Modern Online Book Borrowing Platform
 
-First, run the development server:
+🔗 **Live Site:** https://book-borro.vercel.app  
+💻 **GitHub Repo:** https://github.com/Mst-Jui/book-borro
+
+---
+
+## 🧾 Overview
+
+**Book Borro** is a full-stack web application that brings the traditional library experience into the digital world. Users can browse books, filter by categories, and borrow books seamlessly with a secure authentication system.
+
+---
+
+## 🎯 Project Objective
+
+* 📖 Digitize book borrowing system
+* 🔐 Implement secure authentication (BetterAuth)
+* ⚡ Build high-performance Next.js app
+* 📱 Ensure fully responsive UI
+
+---
+
+## ✨ Core Features
+
+### 🔐 Authentication System
+
+* Email & Password Login
+* User Registration
+* Google Social Login
+* Protected Routes (Private pages)
+
+---
+
+
+
+### 📚 Book Management
+
+* 🔍 Search books by title
+* 🗂️ Category filter (Story, Tech, Science)
+* 📄 Detailed book view page
+
+---
+
+### 📖 Book Details (Private Route)
+
+* Full book information
+* Available quantity display
+* Borrow button with auth check
+
+---
+
+### 👤 User Profile
+
+* View user details
+* Update profile (Name & Image)
+
+---
+
+## 🎨 UI & UX Highlights
+
+* 💡 Clean & modern design
+* 📱 Fully responsive (Mobile / Tablet / Desktop)
+* 🎞️ Smooth animations using **Swiper.js**
+* ⚡ Fast loading & optimized performance
+
+---
+
+## 🛠️ Tech Stack
+
+| Category       | Technology            |
+| -------------- | --------------------- |
+| Framework      | Next.js               |
+| Styling        | Tailwind CSS + HeroUI + DaisyUi|
+| Authentication | BetterAuth            |
+| Database       | MongoDB               |
+| Deployment     | Vercel                |
+
+---
+
+## 📦 Packages Used
+
+* swiper
+* react-toastify
+* react-icons
+* better-auth
+* mongodb
+
+---
+
+
+
+## ⚙️ Installation Guide
 
 ```bash
+# Clone repository
+git clone https://github.com/Mst-Jui/book-borro
+
+# Enter project folder
+cd book-borro
+
+# Install dependencies
+npm install
+
+# Run project
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📱 Responsiveness
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✔ Mobile
+✔ Tablet
+✔ Desktop
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Final Thoughts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project demonstrates a complete real-world full-stack application with authentication, database integration, and responsive UI design. Built with scalability and performance in mind.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
