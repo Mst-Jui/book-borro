@@ -21,7 +21,7 @@ const BookCard = ({ book }) => {
 
         {/* Content Section */}
         <div className="flex flex-col flex-1 px-2">
-          {/* Category/Genre - ছোট একটা ট্যাগ দিলে সুন্দর লাগে */}
+          {/* Category/Genre  */}
           <span className="text-[10px] font-black text-orange-500 uppercase tracking-widest mb-1 block">
             {book.category || "General"}
           </span>
@@ -29,6 +29,11 @@ const BookCard = ({ book }) => {
           <h3 className="text-xl font-extrabold text-gray-900 mb-4 line-clamp-1 group-hover:text-orange-500 transition-colors">
             {book.title}
           </h3>
+
+          {/*  */}
+          <p className="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-2 italic">
+            {book.description}
+          </p>
 
           {/* Action Button */}
           <div className="mt-auto">
