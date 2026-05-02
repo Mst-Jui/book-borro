@@ -4,22 +4,31 @@ import Link from 'next/link';
 import { FiUser, FiImage, FiCheckCircle, FiArrowLeft } from 'react-icons/fi';
 import { toast } from 'react-toastify';
 
-
 const UpdateProfilePage = () => {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    const name = e.target.name.value
-    const image = e.target.image.value
+    const name = e.target.name.value;
+    const image = e.target.image.value;
 
+    
+    const updateData = {};
+    if (name) updateData.name = name;
+    if (image) updateData.image = image;
+
+    
+    if (Object.keys(updateData).length === 0) {
+      return toast.info("Please fill at least one field to update.");
+    }
 
     try {
-      await authClient.updateUser({ name, image });
+      await authClient.updateUser(updateData);
       toast.success("Profile updated successfully!");
-    } catch {
+      e.target.reset(); 
+    } catch (error) {
       toast.error("Update failed!");
+      console.error(error);
     }
-    console.log("Profile Updated");
   };
 
   return (
@@ -38,9 +47,7 @@ const UpdateProfilePage = () => {
           <p className="text-gray-500 text-sm mt-2">Refine your digital library identity</p>
         </div>
 
-        <form
-          onSubmit={handleUpdate}
-          className="space-y-6">
+        <form onSubmit={handleUpdate} className="space-y-6">
 
           {/* Name Input */}
           <div className="space-y-2">
@@ -54,7 +61,7 @@ const UpdateProfilePage = () => {
                 name='name'
                 placeholder="Enter your name"
                 className="w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 outline-none transition-all"
-                required
+              // ekhane 'required' remove kora hoyeche
               />
             </div>
           </div>
@@ -71,7 +78,7 @@ const UpdateProfilePage = () => {
                 name='image'
                 placeholder="https://example.com/image.jpg"
                 className="w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 outline-none transition-all"
-                required
+              // ekhane 'required' remove kora hoyeche
               />
             </div>
           </div>
@@ -86,7 +93,6 @@ const UpdateProfilePage = () => {
           </button>
         </form>
 
-        {/* Note */}
         <p className="text-center text-xs text-gray-400 mt-6 leading-relaxed">
           Your information will be updated across the <br />
           <span className="font-semibold text-orange-400">Book-Borrow</span> ecosystem.
