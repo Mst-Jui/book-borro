@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -11,6 +12,8 @@ import {
 } from 'react-icons/fa';
 import { MdCategory, MdOutlineNumbers } from 'react-icons/md';
 import Image from 'next/image';
+import { authClient } from '@/lib/auth-client';
+import BookBorrowBtn from '@/components/BookBorroBtn';
 
 async function BookDetailsPage({ params }) {
   const { id } = await params
@@ -18,12 +21,36 @@ async function BookDetailsPage({ params }) {
   const books = await res.json();
   const book = books.find((b) => b.id === Number(id));
 
+  // const { data: session } = authClient.useSession();
+  // const user = session?.user;
+
+  // const handleBorrow = () => {
+
+
+  //   //  not logged in
+  //   if (!user) {
+  //     toast.error("Please login to borrow this book!");
+  //     setUrl("/login");
+  //     return;
+  //   }
+
+  //   //  no stock
+  //   if (book.available_quantity === 0) {
+  //     toast.error("No copies available!");
+  //     return;
+  //   }
+
+  //   //  success
+  //   toast.success("Book borrowed successfully!");
+  // };
+
   if (!book) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <h2 className="text-2xl font-bold text-gray-800">Book Not Found!</h2>
       </div>
     );
+
   }
 
   return (
@@ -82,7 +109,7 @@ async function BookDetailsPage({ params }) {
                   <FaBookOpen className="mr-2 text-gray-800" /> Description
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg italic">
-                  "{book.description}"
+                  {book.description}
                 </p>
               </div>
 
@@ -111,19 +138,8 @@ async function BookDetailsPage({ params }) {
               </div>
 
               {/* Action Button */}
-              <div className="pt-2 md:pt-4">
-                <button
-                  disabled={book.available_quantity === 0}
-                  className={`w-full md:w-auto px-8 md:px-12 py-3 md:py-4 font-bold rounded-xl md:rounded-2xl transition-all duration-300 shadow-lg md:shadow-xl flex items-center justify-center gap-2
-                      ${book.available_quantity > 0
-                      ? 'border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white active:scale-95'
-                      : 'bg-gray-200 text-gray-500 cursor-not-allowed border-none shadow-none'
-                    }`}
-                >
-                  <FaUnlockAlt />
-                  {book.available_quantity > 0 ? 'Borrow This Book' : 'Out of Stock'}
-                </button>
-              </div>
+              <BookBorrowBtn key={book.id} book={book} />
+              {/* Action Button end */}
             </div>
           </div>
         </div>
