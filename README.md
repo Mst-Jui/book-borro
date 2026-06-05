@@ -23,6 +23,13 @@
 ---
 
 ## ✨ Core Features
+- Book Borrowing Functionality: Authenticated users can borrow available books directly from the book details page. The system provides instant feedback and ensures a smooth borrowing experience.
+- Book Discovery & Browsing: Explore a wide collection of books across multiple categories.
+ Smart Search & Category Filtering – Quickly find books by title and filter them by Story, Tech, or Science categories.
+- Detailed Book Information: View comprehensive book details, including author, description, and available copies.
+- Online Book Borrowing: Borrow available books seamlessly through a user-friendly borrowing system.
+- Responsive User Experience: The platform is fully optimized for mobile, tablet, and desktop devices, providing a seamless reading and browsing experience across all screen sizes.
+
 
 ### 🔐 Authentication System
 
