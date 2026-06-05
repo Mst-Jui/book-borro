@@ -23,6 +23,7 @@
 ---
 
 ## ✨ Core Features
+- Profile Update Feature: Users can update their display name and profile image at any time, ensuring their account information remains accurate and up to date.
 - Book Borrowing Functionality: Authenticated users can borrow available books directly from the book details page. The system provides instant feedback and ensures a smooth borrowing experience.
 - Book Discovery & Browsing: Explore a wide collection of books across multiple categories.
  Smart Search & Category Filtering – Quickly find books by title and filter them by Story, Tech, or Science categories.
