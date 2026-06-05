@@ -12,6 +12,10 @@
 **Book Borro** is a full-stack web application that brings the traditional library experience into the digital world. Users can browse books, filter by categories, and borrow books seamlessly with a secure authentication system.
 
 ---
+<p align="center">
+  <img src="https://i.ibb.co/bM5PJt2t/Frame-220.jpg" alt="BookNest Banner" width="100%" />
+</p>
+---
 
 ## 🎯 Project Objective
 
